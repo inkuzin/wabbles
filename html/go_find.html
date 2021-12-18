@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;900&family=Roboto:wght@100&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/find_infor.css">
+    <title>Wabble</title>
+</head>
+<body>
+    <div class="bg"></div>
+    <div class="wrap">
+        <header class="header_area">
+            <div id="go_intro"></div>
+        </header>
+        <section class="contents_area">
+            <div class="background_img"></div>
+            <div class="infor_wrap">
+                <p class="infor_text">아이디, 비밀번호 찾기</p>
+                <div class="button_mode">
+                    <div class="id_button">아이디(ID)</div>
+                    <div class="undefined_area"></div>
+                    <div class="pw_button">비밀번호(PW)</div>
+                </div>
+                <form class="find_wrap" action="../php/member_insert.php" method="POST">
+                    <div class="name_area">
+                        <input type="text" name="usr_name" id="usr_name" placeholder="Name (성명입력)">
+                    </div>
+                    <div class="phone_area">
+                        <select name="first_phone" id="first_phone">
+                            <option value="010">010</option>
+                            <option value="011">011</option>
+                            <option value="016">016</option>
+                            <option value="017">017</option>
+                            <option value="019">019</option>
+                        </select>
+                        <input type="number" name="middle_phone" id="middle_phone">
+                    </div>
+                    <p class="alert_text">핸드폰 번호는 '-'없이 입력해주세요</p>
+                    <div class="alert_div">
+                        <p class="title_text">공지사항</p>
+                        <p class="first_text">인증번호가 계속 틀리는 경우에는 와블 고객센터로 직접 문의해주시기 바랍니다.</p>
+                        <p class="second_text">와블 고객센터: 1670-1525(운영시간 09:00 ~ 18:00)</p>
+                    </div>
+                    <div class="button_wrap">
+                        <input class="check_btn" type="submit" value="Check" name="check_btn">
+                    </div>
+                    <!---
+                    <div class="confirm_area">
+                        <input type="text" name="confirm_number" id="confirm_number">
+                        <button type="submit">확인</button>
+                    </div>
+                    <p class="alert_text">핸드폰 번호는 '-'없이 입력해주세요</p>
+                    <p class="infor_pw">*비밀번호 찾기</p>
+                    <div class="mail_area">
+                        <input type="email" name="usr_mail" id="usr_mail">
+                        <button type="button">메일 전송</button>
+                    </div>
+                    <div class="confirm_mail_area">
+                        <input type="text" name="confirm_mail" id="confirm_mail">
+                        <button type="button">인증 확인</button>
+                    </div>
+                    <p class="alert_text">이메일 인증번호 발송이 안되나요?</p>-->
+                    </form>
+            </div>
+        </section>
+    </div>
+    <script src="../js/index.js"></script>
+</body>
+</html>

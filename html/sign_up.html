@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;900&family=Roboto:wght@100&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/sign_up.css">
+    <title>Wabble</title>
+</head>
+<body>
+    <div class="bg"></div>
+    <div class="wrap">
+        <header class="header_area">
+            <div id="go_intro"></div>
+        </header>
+        <section class="contents_area">
+            <div class="background_img"></div>
+            <form class="join_wrap" action="../php/member_insert.php" method="POST">
+                <p class="join_text">회원가입</p>
+                <div class="join_input_wrap">
+                    <input type="text" name="usr_name" placeholder="이름(2자 이상)" id="join_user_name">
+                    <input type="email" name="usr_mail" placeholder="이메일 (example@gmail.com)" id="join_user_mail">
+                    <button type="button" class="disabled_btn" disabled>메일 전송</button>
+                    <input type="text" placeholder="이메일 인증 문자" id="email_text">
+                    <button class="common_btn" type="button" id="compare_btn">인증 확인</button>
+                    <p class="confirm_text"></p>
+                    <input type="password" name="usr_pw" placeholder="영문, 숫자, 특문을 조합 10자 이상" id="join_user_pw">
+                    <div class="join_phone_area">
+                        <select name="first_phone" id="join_first_phone">
+                            <option value="010">010</option>
+                            <option value="011">011</option>
+                            <option value="016">016</option>
+                            <option value="017">017</option>
+                            <option value="019">019</option>
+                        </select>
+                        <input type="text" name="middle_phone" id="join_middle_phone">
+                    </div>
+                    <p class="guide_text">핸드폰 번호는 "-"없이 입력해주세요</p>
+                    <input type="hidden" name="mail_btn" class="check_trigger">
+                </div>
+                <div class="check_wrap">
+                    <div class="all_check_wrap">
+                        <input type="checkbox" name="all_check" id="all_check">
+                        <label for="all_check">전체 약관에 동의합니다</label>
+                    </div>
+                    <div class="check_line">
+                        <div class="service_check_wrap">
+                            <input type="checkbox" name="service_check" id="service_check">
+                            <label for="service_check">와블 서비스 이용약관에 동의합니다(필수)</label>
+                        </div>
+                        <div class="infor_check_wrap">
+                            <input type="checkbox" name="infor_check" id="infor_check">
+                            <label for="infor_check">개인정보 수집 및 이용에 대한 안내에 동의합니다(필수)</label>
+                        </div>
+                        <div class="event_check_wrap">
+                            <input type="checkbox" name="event_check" id="event_check">
+                            <label for="event_check">커뮤니티 알림 및 이벤트 정보 수신에 동의합니다(선택)</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="button_wrap">
+                    <input type="submit" name="members" class="disabled_btn2" value="SIGN UP" disabled>
+                </div>
+            </form>
+        </section>
+    </div>
+    <script src="../js/index.js"></script>
+</body>
+</html>

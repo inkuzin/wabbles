@@ -1,0 +1,333 @@
+$color1 : #ff8968;
+$color2 : #7e55ff;
+$color3 : rgb(255,250,240);
+
+* {
+    margin : 0;
+    padding : 0;
+    box-sizing : border-box;
+    outline: none;
+}
+
+@font-face {
+    font-family: 'S-CoreDream-3Light';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-3Light.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@mixin input_design {
+    width: 400px;
+    height: 52px;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 1.2rem;
+}
+
+@mixin input_design2 {
+    width: 300px;
+    height: 52px;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 1.2rem;
+    margin-top: 10px;
+}
+
+@mixin p_design {
+    font-size: 1rem;
+    opacity: 0.6;
+    text-shadow: 1px 1px 2px black;
+    cursor: pointer;
+}
+
+@mixin check_design {
+    font-size: 12px;
+}
+
+body{
+    width : 100%;
+    height: 100%;
+    background-image: url('../img/about_time.jpg');
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font-family: 'S-CoreDream-3Light';
+}
+
+.bg{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: rgba(0,0,0,0.6);
+    z-index: 1;
+}
+
+.header_area {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 100px;
+    padding-top: 50px;
+    z-index: 1000;
+    position: relative;
+    
+    div{
+        width: 150px;
+        height: 100%;
+        margin-left: 50px;
+        background-image: url("../img/text_logo02.png");
+	    background-position: 50% 50%;
+	    background-repeat: no-repeat;
+        cursor: pointer;
+    }
+
+    button{
+        margin-right: 50px;
+        width: 80px;
+        height: 40px;
+        border-radius: 20px;
+        border: none;
+        font-weight: bold;
+        cursor: pointer;
+    }
+}
+
+.contents_area{
+    position: relative;
+    text-align: center;
+    color: white;
+    text-shadow: 1px 1px 2px black;
+    font-size: 2rem;
+    margin-top: 100px;
+    width: 100%;
+    height: 100%;
+    width: 100%;
+    z-index: 1000;
+    display: none;
+
+    .join_wrap{
+        width: 640px;
+        height: auto;
+        left: 50%;
+        position: relative;
+        margin-left: -320px;
+        text-align: center;
+        border-radius: 20px;
+        background-color: rgba(0,0,0,0.5);
+
+        .join_text{
+            padding-top: 40px;
+            font-size: 30px;
+            padding-bottom: 40px;
+            font-weight: bold;
+        }
+
+        .join_input_wrap{
+            width:400px;
+            height: auto;
+            margin-left: 120px;
+            text-align: left;
+
+            #join_user_name{
+                @include input_design
+            }
+
+            .disabled_btn{
+                font-family: 'S-CoreDream-3Light';
+                color: white;
+                border-radius: 5px;
+                background-color: rgba(158, 44, 44, 0.1);
+                font-weight: bold;
+                width: 85px;
+                height: 52px;
+                border: 2px solid gray;
+                margin-left: 5px;
+            }
+
+            #check_mail_btn{
+                font-family: 'S-CoreDream-3Light';
+                color: white;
+                border-radius: 5px;
+                background-color: rgba(255,255,255, 0.1);
+                font-weight: bold;
+                width: 85px;
+                height: 52px;
+                border: 2px solid transparent;
+                background-image: linear-gradient(#000000, #000000), linear-gradient(45deg, #7e55ff 50%, #ff8968);
+                background-origin: border-box;
+                background-clip: content-box, border-box;
+                margin-left: 5px;
+                cursor: pointer;
+                transition: 0.3s;
+            }
+            #check_mail_btn:hover{
+                background: white;
+                color: $color2;
+            }
+
+            #join_user_mail{
+                @include input_design2
+            }
+
+            #compare_btn{
+                font-family: 'S-CoreDream-3Light';
+                color: white;
+                border-radius: 5px;
+                background-color: rgba(255,255,255, 0.1);
+                font-weight: bold;
+                width: 85px;
+                height: 52px;
+                border: 2px solid transparent;
+                background-image: linear-gradient(#000000, #000000), linear-gradient(45deg, #7e55ff 50%, #ff8968);
+                background-origin: border-box;
+                background-clip: content-box, border-box;
+                margin-left: 5px;
+                cursor: pointer;
+                transition: 0.3s;
+                display: none;
+            }
+            #compare_btn:hover{
+                background: white;
+                color: $color2;
+            }
+
+            #email_text{
+                display: none;
+                @include input_design2
+            }
+
+            .confirm_text{
+                font-size: 12px;
+                color: aqua;
+                padding-top: 10px;
+                padding-bottom: 20px;
+                display: none;
+            }
+
+            #join_user_pw{
+                @include input_design
+            }
+
+            .join_phone_area{
+                display: none;
+                width: 400px;
+                height: auto;
+                justify-content: space-between;
+                align-items: center;
+                margin-top: 10px;
+    
+                select{
+                    width: 85px;
+                    height: 52px;
+                    border-radius: 5px;
+                    font-size: 1.2rem;
+                    padding: 10px;
+                }
+    
+                input{
+                    width: 300px;
+                    height: 52px;
+                    border-radius: 5px;
+                    font-size: 1.2rem;
+                    padding: 10px;
+                }
+            }
+
+
+            .guide_text{
+                font-size: 12px;
+                color: floralwhite;
+                opacity: 0.6;
+                padding-top: 10px;
+                padding-bottom: 20px;
+                border-bottom: 1px solid rgba(255,250,240, 0.4);
+                display: none;
+            }
+        }
+    }
+
+    .check_wrap{
+        width:400px;
+        height: auto;
+        margin-left: 120px;
+        text-align: left;
+
+        .all_check_wrap{
+            opacity: 1;
+            margin: 20px 0 20px 0;
+            @include check_design;
+
+            label{
+                position: relative;
+                top: -2px;
+            }
+        }
+
+        .service_check_wrap, .infor_check_wrap{
+            opacity: 0.6;
+            margin: 5px 0 5px 0;
+            @include check_design;
+
+            label{
+                position: relative;
+                top: -2px;
+            }
+        }
+
+        .event_check_wrap{
+            opacity: 0.6;
+            margin: 5px 0 20px 0;
+            @include check_design;
+
+            label{
+                position: relative;
+                top: -2px;
+            }
+        }
+    }
+    .button_wrap{
+        width: 400px;
+        height: auto;
+        margin-left: 120px;
+        text-align: center;
+        padding-bottom: 40px;
+
+        .disabled_btn2{
+            font-family: 'S-CoreDream-3Light';
+            color: white;
+            border-radius: 5px;
+            background-color: rgba(158, 44, 44, 0.1);
+            font-weight: bold;
+            width: 80px;
+            height: 40px;
+            border: 2px solid gray;
+            margin-left: 5px;
+        }
+
+        #go_sign_up{
+            font-family: 'S-CoreDream-3Light';
+            color: white;
+            border-radius: 5px;
+            background-color: rgba(255,255,255, 0.1);
+            font-weight: bold;
+            width: 80px;
+            height: 40px;
+            border: 2px solid transparent;
+            background-image: linear-gradient(#000000, #000000), linear-gradient(45deg, #7e55ff 50%, #ff8968);
+            background-origin: border-box;
+            background-clip: content-box, border-box;
+            margin-left: 5px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        #go_sign_up:hover{
+            background: white;
+            color: $color2;
+        }
+    }
+}
+
+#join_user_pw, #join_user_phone, #join_submit_btn{
+    display: none;
+}

@@ -1,0 +1,107 @@
+@font-face {
+  font-family: 'S-CoreDream-3Light';
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-3Light.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  font-family: 'S-CoreDream-3Light'; }
+
+[contenteditable=true]:empty:before {
+  content: attr(placeholder);
+  display: block;
+  /* For Firefox */ }
+
+body {
+  width: 100%;
+  height: 100%; }
+
+header {
+  width: 100%;
+  height: 100px;
+  background-color: #282828;
+  display: flex;
+  align-items: center; }
+  header .menubar_area {
+    width: 600px;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; }
+    header .menubar_area #go_main {
+      width: 150px;
+      height: 50px;
+      background-image: url("../img/text_logo02.png");
+      background-position: 50% 50%;
+      background-repeat: no-repeat;
+      cursor: pointer;
+      margin-left: 100px; }
+    header .menubar_area p {
+      font-size: 1rem;
+      color: floralwhite;
+      transition: 0.3s;
+      font-size: 1.2rem;
+      font-weight: bold;
+      cursor: pointer; }
+    header .menubar_area p:hover {
+      color: #7e55ff; }
+  header .right_zone {
+    right: 0;
+    position: absolute;
+    margin-right: 100px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center; }
+    header .right_zone .search_area {
+      display: inline-block;
+      height: 30px;
+      border-radius: 5px;
+      display: flex;
+      align-items: center; }
+      header .right_zone .search_area i {
+        color: floralwhite;
+        font-size: 1.2rem;
+        cursor: pointer; }
+      header .right_zone .search_area div {
+        color: floralwhite;
+        font-size: 14px;
+        width: 150px;
+        display: none;
+        margin-left: 10px;
+        color: #cccccc; }
+    header .right_zone .infor_area {
+      display: inline-block;
+      margin-left: 20px; }
+      header .right_zone .infor_area p {
+        color: floralwhite;
+        font-size: 1.2rem;
+        font-weight: bold;
+        cursor: pointer; }
+      header .right_zone .infor_area .my_infor {
+        position: absolute;
+        width: 120px;
+        margin-top: 10px;
+        background-color: #212121;
+        color: floralwhite;
+        font-size: 0.8rem;
+        border: 1px solid gray;
+        border-radius: 5px;
+        right: -59px;
+        list-style: none;
+        display: none; }
+        header .right_zone .infor_area .my_infor li {
+          padding: 5px;
+          color: #cccc;
+          transition: 0.3s;
+          cursor: pointer; }
+        header .right_zone .infor_area .my_infor li:hover {
+          color: floralwhite; }
+    header .right_zone .xi-caret-down-min {
+      color: floralwhite;
+      margin-left: 5px;
+      cursor: pointer; }
+
+/*# sourceMappingURL=main.css.map */

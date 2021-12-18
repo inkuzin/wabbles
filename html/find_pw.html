@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;900&family=Roboto:wght@100&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/sign_up.css">
+    <title>Wabble</title>
+</head>
+<body>
+    <div class="bg"></div>
+    <div class="wrap">
+        <header class="header_area">
+            <div id="go_intro">Wabble</div>
+            <button id="go_sign_in">로그인</button>
+        </header>
+        <section class="contents_area">
+            <div class="background_img"></div>
+            <form class="login_wrap" action="../php/pw_mail.php" method="post">
+                <p class="login_text">비밀번호 찾기</p>
+                <input type="email" name="usr_mail" placeholder="이메일 (example@gmail.com)" id="user_mail">
+                <p class="guide_text">기존에 가입하신 이메일 주소를 입력해주시면 임시 비밀번호가 전송됩니다. 
+                    임시 비밀번호로 로그인 하신 뒤 새로운 비밀 번호를 설정하세요.
+                </p>
+                <input class="common_btn" type="submit" name="find_btn" value="비밀번호 찾기">
+            </form>
+        </section>
+    </div>
+    <script src="../js/index.js"></script>
+</body>
+</html>

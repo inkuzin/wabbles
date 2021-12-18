@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;900&family=Roboto:wght@100&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/sign_in.css">
+    <title>Wabble</title>
+</head>
+<body>
+    <div class="bg"></div>
+    <div class="wrap">
+        <header class="header_area">
+            <div id="go_intro"></div>
+        </header>
+        <section class="contents_area">
+            <div class="background_img"></div>
+            <form class="login_wrap" action="../php/login_module.php" method="post">
+                <p class="login_text">로그인</p>
+                <input type="email" name="email" placeholder="이메일 (example@gmail.com)" id="user_id">
+                <input type="password" name="usr_pw" placeholder="비밀번호" id="user_pw">
+                <div class="id_pw_guide">
+                    <label class="id_save">
+                        <input type="checkbox" name="id_save">아이디 저장
+                    </label>
+                    <label class="auto_login">
+                        <input type="checkbox" name="auto_login">자동 로그인
+                    </label>
+                    <p id="go_find">이메일, 비밀번호가 기억나지 않나요?</p>
+                </div>
+                <div class="button_wrap">
+                    <input type="submit" name="login_btn" id="sign_in_btn" value="LOGIN">
+                    <button type="button" id="sign_up_btn">SIGN UP</button>
+                </div>
+                <div class="social_login_area">
+                    <p class="social_text">SNS 로그인</p>
+                    <ul class="icon_area">
+                        <li class="kakaotalk_icon">
+                            <img id="go_kakaotalk"src="../img/icon/kakao_icon.png" alt="카카오톡 로고">
+                        </li>
+                        <li class="google_icon">
+                            <img id="go_google" src="../img/icon/google_icon.png" alt="구글 로고">
+                        </li>
+                        <li class="line_icon">
+                            <img id="go_line" src="../img/icon/line_icon.png" alt="라인 로고">
+                        </li>
+                        <li class="facebook_icon">
+                            <img id="go_facebook" src="../img/icon/facebook_icon.png" alt="페이스북 로고">
+                        </li>
+                    </ul>
+                    <p class="social_sub_text">SNS계정으로 간편하게 가입하여 서비스를 이용하실 수 있습니다.</p>
+                </div>
+            </form>
+        </section>
+    </div>
+    <script src="../js/index.js"></script>
+</body>
+</html>

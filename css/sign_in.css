@@ -1,0 +1,185 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none; }
+
+@font-face {
+  font-family: 'S-CoreDream-3Light';
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-3Light.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+body {
+  width: 100%;
+  height: 100%;
+  background-image: url("../img/about_time.jpg");
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  font-family: 'S-CoreDream-3Light'; }
+
+.bg {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 1; }
+
+.header_area {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 100px;
+  padding-top: 50px;
+  z-index: 1000;
+  position: relative; }
+  .header_area div {
+    width: 150px;
+    height: 100%;
+    margin-left: 50px;
+    background-image: url("../img/text_logo02.png");
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    cursor: pointer; }
+  .header_area button {
+    margin-right: 50px;
+    width: 80px;
+    height: 40px;
+    border-radius: 20px;
+    border: none;
+    font-weight: bold;
+    cursor: pointer; }
+
+.contents_area {
+  position: relative;
+  text-align: center;
+  color: white;
+  text-shadow: 1px 1px 2px black;
+  font-size: 2rem;
+  margin-top: 100px;
+  width: 100%;
+  height: 100%;
+  width: 100%;
+  z-index: 1000;
+  display: none; }
+  .contents_area .login_wrap {
+    width: 640px;
+    height: auto;
+    left: 50%;
+    position: relative;
+    margin-left: -320px;
+    text-align: center;
+    border-radius: 20px;
+    background-color: rgba(0, 0, 0, 0.5); }
+    .contents_area .login_wrap .login_text {
+      padding-top: 40px;
+      font-size: 30px;
+      padding-bottom: 40px;
+      font-weight: bold; }
+    .contents_area .login_wrap #user_id {
+      width: 400px;
+      height: 52px;
+      border-radius: 5px;
+      padding: 10px;
+      font-size: 1.2rem; }
+    .contents_area .login_wrap #user_pw {
+      margin-top: 10px;
+      width: 400px;
+      height: 52px;
+      border-radius: 5px;
+      padding: 10px;
+      font-size: 1.2rem; }
+    .contents_area .login_wrap .id_pw_guide {
+      text-align: left;
+      width: 400px;
+      margin-left: 120px;
+      line-height: 42px; }
+      .contents_area .login_wrap .id_pw_guide input {
+        cursor: pointer;
+        margin-right: 5px; }
+      .contents_area .login_wrap .id_pw_guide .id_save {
+        cursor: pointer;
+        font-size: 12px; }
+      .contents_area .login_wrap .id_pw_guide .auto_login {
+        cursor: pointer;
+        font-size: 12px;
+        margin-left: 10px; }
+      .contents_area .login_wrap .id_pw_guide p {
+        font-size: 12px;
+        display: inline-block;
+        margin-left: 30px;
+        opacity: 0.6;
+        cursor: pointer; }
+      .contents_area .login_wrap .id_pw_guide p:hover {
+        text-decoration: underline; }
+    .contents_area .login_wrap .button_wrap {
+      width: 400px;
+      height: auto;
+      margin-left: 120px;
+      text-align: left; }
+      .contents_area .login_wrap .button_wrap #sign_in_btn {
+        font-family: 'S-CoreDream-3Light';
+        width: 70px;
+        height: 30px;
+        color: white;
+        border-radius: 5px;
+        border: none;
+        background: linear-gradient(45deg, #7e55ff 50%, #ff8968);
+        font-weight: bold;
+        cursor: pointer;
+        transition: 0.3s;
+        letter-spacing: 1px; }
+      .contents_area .login_wrap .button_wrap #sign_in_btn:hover {
+        background: white;
+        color: #7e55ff; }
+      .contents_area .login_wrap .button_wrap #sign_up_btn {
+        font-family: 'S-CoreDream-3Light';
+        color: white;
+        border-radius: 5px;
+        background-color: rgba(255, 255, 255, 0.1);
+        font-weight: bold;
+        width: 70px;
+        height: 30px;
+        border: 2px solid transparent;
+        background-image: linear-gradient(#000000, #000000), linear-gradient(45deg, #7e55ff 50%, #ff8968);
+        background-origin: border-box;
+        background-clip: content-box, border-box;
+        margin-left: 5px;
+        cursor: pointer;
+        transition: 0.3s; }
+      .contents_area .login_wrap .button_wrap #sign_up_btn:hover {
+        background: white;
+        color: #7e55ff; }
+    .contents_area .login_wrap .social_login_area {
+      margin-top: 30px;
+      width: 400px;
+      height: auto;
+      font-size: 1rem;
+      margin-left: 120px;
+      text-align: left; }
+      .contents_area .login_wrap .social_login_area .social_text {
+        display: inline-block;
+        font-size: 1rem; }
+      .contents_area .login_wrap .social_login_area ul {
+        margin-left: 85px;
+        padding-top: 20px;
+        border-top: 1px solid rgba(255, 250, 240, 0.6);
+        margin-top: -11.5px;
+        display: flex;
+        justify-content: space-around; }
+        .contents_area .login_wrap .social_login_area ul li {
+          display: inline-block;
+          cursor: pointer; }
+          .contents_area .login_wrap .social_login_area ul li img {
+            display: inline-block;
+            width: 48px;
+            height: auto; }
+      .contents_area .login_wrap .social_login_area .social_sub_text {
+        font-size: 12px;
+        color: floralwhite;
+        opacity: 0.6;
+        padding-top: 20px;
+        padding-bottom: 20px; }
+
+/*# sourceMappingURL=sign_in.css.map */
